@@ -59,3 +59,23 @@ Hotel-Management-System/
 │── package.json
 │── .gitignore
 
+
+
+---
+
+## 🔧 Installation & Setup  
+
+### **Step 1: Clone the Repository**  
+```bash
+git clone https://github.com/rahulpatel51/Hotel-Management-System.git
+cd Hotel-Management-System
+
+Step 2: Setup Backend
+cd backend
+npm install  # Install dependencies
+
+Run the backend server:
+npm start
+The backend server will run on http://localhost:5000.
+
+🚀 Happy Coding! 😊✨
