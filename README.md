@@ -71,11 +71,19 @@ git clone https://github.com/rahulpatel51/Hotel-Management-System.git
 cd Hotel-Management-System
 
 Step 2: Setup Backend
-cd backend
+cd backend/Admin
 npm install  # Install dependencies
 
 Run the backend server:
 npm start
-The backend server will run on http://localhost:5000.
+The Admin backend server will run on http://localhost:5000.
+
+Step 3: Setup Backend
+cd backend/User
+npm install  # Install dependencies
+
+Run the backend server:
+npm start
+The Admin backend server will run on http://localhost:5001.
 
 🚀 Happy Coding! 😊✨
