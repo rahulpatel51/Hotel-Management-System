@@ -1,0 +1,47 @@
+# 🔥 Node.js Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 🚨 Environment Variables (Sensitive Data)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# 🔄 Logs
+logs/
+*.log
+npm-debug.log
+yarn-debug.log
+pnpm-debug.log
+debug.log
+error.log
+out.log
+
+# 📂 Uploaded Files (Multer / User Uploads)
+uploads/
+public/uploads/
+
+# 🗃 Database Files
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.sql
+
+# ⚙️ System & Editor-Specific Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 🔄 Backup / Temporary Files
+*.bak
+*.swp
+*.swo
+*.swn
+*.tmp
