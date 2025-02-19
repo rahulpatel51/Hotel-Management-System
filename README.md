@@ -7,7 +7,7 @@ A **full-stack hotel management system** built with **HTML, CSS, JavaScript, Nod
 ## 🌟 Features  
 
 ### 🧑‍💼 User Features  
-- 🔐 **User Authentication** (Signup/Login with JWT)  
+- 🔐 **User Authentication** (Signup/Login with JWT)  n 
 - 📋 **User Dashboard** (View & Manage Bookings)  
 - 🏠 **Book Rooms** (Add, Edit, Cancel Bookings)  
 - 🚖 **Request Cabs** (Book & Manage Rides)  
@@ -58,6 +58,34 @@ Hotel-Management-System/
 │── README.md
 │── package.json
 │── .gitignore
+
+
+## 📂 Project Preview  
+
+### 🔐 User & Admin Login  
+<p align="center">
+  <img src="screenshots/user-login.png" width="45%" alt="User Login">
+  <img src="screenshots/admin-login.png" width="45%" alt="Admin Login">
+</p>  
+
+### 📊 User & Admin Dashboard  
+<p align="center">
+  <img src="screenshots/user-dashboard.png" width="45%" alt="User Dashboard">
+  <img src="screenshots/admin-dashboard.png" width="45%" alt="Admin Dashboard">
+</p>  
+
+### 🏨 Hotel Section & 📅 Booking Section  
+<p align="center">
+  <img src="screenshots/hotel-section.png" width="45%" alt="Hotel Section">
+  <img src="screenshots/booking-section.png" width="45%" alt="Booking Section">
+</p>  
+
+### 🧹 Housekeeping Request Section  
+<p align="center">
+  <img src="screenshots/housekeeping.png" width="90%" alt="Housekeeping Request Section">
+</p>  
+
+---
 
 
 
