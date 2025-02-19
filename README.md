@@ -1,15 +1,18 @@
 # 🏨 Hotel Management System
 
-A **full-stack hotel management system** built with **HTML, CSS, JavaScript, Node.js, Express, Multer, and MongoDB**. This system allows hotels to manage bookings, users, rooms, and payments efficiently.
+A **full-stack hotel management system** built with **HTML, CSS, JavaScript, Node.js, Express, Multer, and MongoDB**. This system provides an advanced management solution for **Rooms, Cabs, Halls, and Housekeeping services**.
+
+---
 
 ## 🌟 Features
-- 🔐 **User Authentication** (Signup/Login)
-- 🏠 **Room Management** (Add, Edit, Delete)
-- 📅 **Booking System** (Reserve Rooms)
+- 🔐 **User Authentication** (Signup/Login with JWT)
+- 🏠 **Room Management** (Add, Edit, Delete Rooms)
+- 🚖 **Cab Booking** (Request & Manage Cabs)
+- 🎉 **Hall Reservation** (Book Banquet Halls)
+- 🧹 **Housekeeping Services** (Request Cleaning)
 - 📂 **File Uploads** (Multer for room images)
-- 📊 **Admin Dashboard** (Manage Users & Bookings)
-- 💳 **Payment Integration** (Optional)
-- 🌐 **Responsive UI** (Fully mobile-friendly)
+- 📊 **Admin Dashboard** (Manage Users, Rooms, Cabs, Halls, Housekeeping)
+
 
 ---
 
@@ -26,3 +29,5 @@ A **full-stack hotel management system** built with **HTML, CSS, JavaScript, Nod
 ---
 
 ## 📂 Folder Structure
+
+Hotel-Management-System/ │── backend/ │ ├── config/ # Database Connection │ ├── models/ # Mongoose Models (Users, Rooms, Cabs, Halls, Housekeeping) │ ├── routes/ # API Routes (Rooms, Cabs, Halls, Housekeeping) │ ├── controllers/ # Business Logic │ ├── middleware/ # Auth Middleware │ ├── uploads/ # Room, Cab, Hall Images │ ├── server.js # Main Server File │ │── frontend/ │ ├── assets/ # Images, Icons, CSS │ ├── pages/ # HTML Pages (Home, Booking, Housekeeping) │ ├── scripts/ # JavaScript Files │ ├── index.html # Home Page │ │── README.md │── package.json │── .gitignore
