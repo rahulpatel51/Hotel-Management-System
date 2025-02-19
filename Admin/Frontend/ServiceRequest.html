@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Housekeeping Requests</title>
+    <link rel="stylesheet" href="Css/ServiceRequest.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+   
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Admin Dashboard Content -->
+    <section class="dashboard-section">
+        <div class="dashboard-header">
+            <h2>Pending Housekeeping Requests</h2>
+            <p>Click to accept, reject, or view request details.</p>
+        </div>
+
+        <div id="request-list" class="request-list">
+            <!-- Pending requests will appear here -->
+        </div>
+    </section>
+
+    <!-- Modal to show request details -->
+    <div id="request-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Request Details</h3>
+            <p><strong>Room Number:</strong> <span id="modal-room-number"></span></p>
+            <p><strong>Name:</strong> <span id="modal-name"></span></p>
+            <p><strong>Email:</strong> <span id="modal-email"></span></p>
+            <p><strong>Mobile Number:</strong> <span id="modal-phone"></span></p>
+            <p><strong>Special Request:</strong> <span id="modal-special-request"></span></p>
+            <p><strong>Price:</strong> ₹<span id="modal-price"></span></p>
+            
+            <!-- Accept/Reject Buttons -->
+            <div class="modal-buttons">
+                <button id="accept-btn" class="accept-btn">Accept</button>
+                <button id="reject-btn" class="reject-btn">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ServiceRequest.js"></script>
+</body>
+</html>

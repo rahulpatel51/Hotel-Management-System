@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee - Hotel Management</title>
+    <link rel="stylesheet" href="Css/AddStaff.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Add New Employee Card -->
+        <div class="employee-management-card">
+            <h2>Add New Employee</h2>
+            <p>Click below to add a new employee to the hotel</p>
+        </div>
+
+        <!-- Form Card for Adding Employee -->
+        <div class="form-card">
+            <form id="add-employee-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="employeeName">Employee Name:</label>
+                    <input type="text" id="employeeName" name="employeeName" placeholder="Enter employee name" required>
+                </div>
+                <div class="form-group">
+                    <label for="employeeEmail">Employee Email:</label>
+                    <input type="email" id="employeeEmail" name="employeeEmail" placeholder="Enter employee email" required>
+                </div>
+                <div class="form-group">
+                    <label for="employeePhone">Employee Phone:</label>
+                    <input type="text" id="employeePhone" name="employeePhone" placeholder="Enter employee phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="employeePosition">Position:</label>
+                    <select id="employeePosition" name="employeePosition" required>
+                        <option value="manager">Manager</option>
+                        <option value="staff">Staff</option>
+                        <option value="receptionist">Receptionist</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="employeeSalary">Salary:</label>
+                    <input type="text" id="employeeSalary" name="employeeSalary" placeholder="Enter employee salary" required>
+                </div>
+                <div class="form-group">
+                    <label for="employeeAddress">Address:</label>
+                    <textarea id="employeeAddress" name="employeeAddress" placeholder="Enter employee address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="employeeImage">Employee Image:</label>
+                    <input type="file" id="employeeImage" name="employeeImage" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn-submit">Add Employee</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/AddStaff.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding-left: 250px; /* Add padding to body to make space for sidebar */
+    flex-direction: column; /* Ensure content is stacked properly */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure sidebar stays on top of the body */
+}
+
+.logo .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #2C3E50;
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.sidebar .logo {
+    padding: 20px;
+    background-color: #ECF0F1;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+}
+
+.sidebar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li a:hover {
+    background-color: #34495E;
+    padding-left: 15px;
+}
+
+.sidebar .logo a {
+    text-decoration: none;
+}
+
+/* Styling for Logout button */
+#logoutBtn {
+    color: white;
+    background-color: #2C3E50;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #34495E; /* Darker red on hover */
+    padding-left: 15px;
+}

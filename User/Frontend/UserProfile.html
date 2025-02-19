@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="Css/UserProfile.css">
+    <link rel="stylesheet" href="Css/Common.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <a href="UserDashboard.html">
+                <span class="logo-text">Hotel Palace</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="UserDashboard.html">DASHBOARD</a></li>
+            <li><a href="RoomBooking.html">Room Booking</a></li>
+            <li><a href="CabBooking.html">Cab Booking</a></li>
+            <li><a href="WeddingHallBooking.html">Wedding Hall</a></li>
+            <li><a href="HousekeepingRequest.html">Housekeeping</a></li>
+            <li><a href="BookingHistory.html">Booking History</a></li>
+            <li><a href="UserProfile.html">Profile</a></li>
+            <li><button id="logoutBtn">Logout</button></li>
+        </ul>
+    </div>
+
+    <!-- User Profile Section -->
+    <section class="profile-section">
+        <div class="profile-header">
+            <h2>User Profile</h2>
+            <p>View and manage your personal information.</p>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-card">
+                <!-- Profile Image with hover effect -->
+                <div class="profile-image">
+                    <img src="./Images/profile.png" alt="User Image" id="profileImage">
+                    <div class="change-img-overlay" onclick="document.getElementById('uploadInput').click()">Change
+                        Image</div>
+                    <input type="file" id="uploadInput" class="upload-input" accept="image/*"
+                        onchange="previewImage(event)">
+                </div>
+
+                <!-- Profile Information -->
+                <div class="profile-info">
+                    <h3 id="userName">Rahul Singh</h3>
+                    <p id="userEmail"><strong>Email:</strong></p>
+                    <p id="userMobile"><strong>Mobile:</strong></p>
+                    <p id="userAddress"><strong>Address:</strong></p>
+                    <p id="userDOB"><strong>Date of Birth:</strong></p>
+                    <p id="userType"><strong>User Type:</strong></p>
+                    <button class="edit-profile-btn" id="editProfileBtn">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Edit Profile</h2>
+        <form id="editProfileForm">
+            <label for="editName">Full Name</label>
+            <input type="text" id="editName" required><br>
+            
+            <label for="editEmail">Email</label>
+            <input type="email" id="editEmail" required><br>
+            
+            <label for="editMobile">Mobile Number</label>
+            <input type="text" id="editMobile" required><br>
+            
+            <label for="editAddress">Address</label>
+            <input type="text" id="editAddress" required><br>
+            
+            <label for="editDOB">Date of Birth</label>
+            <input type="date" id="editDOB" required><br>
+            
+            <label for="editProfilePic">Profile Picture</label>
+            <input type="file" id="editProfilePic" accept="image/*"><br>
+
+            <button type="button" id="saveChangesBtn">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+
+    <script src="Js/UserProfile.js" defer></script>
+    <script src="Js/logout.js"></script>
+</body>
+
+</html>

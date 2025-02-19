@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Housekeeping Service - Hotel Management</title>
+    <link rel="stylesheet" href="Css/AddHousKeepingService.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Add New Housekeeping Service Card -->
+        <div class="housekeeping-management-card">
+            <h2>Add Housekeeping Service</h2>
+            <p>Click below to add a new housekeeping service for the hotel</p>
+        </div>
+
+        <!-- Form Card for Adding Housekeeping Service -->
+        <div class="form-card">
+            <form id="add-housekeeping-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="serviceName">Service Name:</label>
+                    <input type="text" id="serviceName" name="serviceName" placeholder="Enter service name" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDescription">Service Description:</label>
+                    <textarea id="serviceDescription" name="serviceDescription" placeholder="Enter service description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="servicePrice">Service Price:</label>
+                    <input type="number" id="servicePrice" name="servicePrice" placeholder="Enter service price" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceStatus">Service Status:</label>
+                    <select id="serviceStatus" name="serviceStatus" required>
+                        <option value="available">Available</option>
+                        <option value="unavailable">Unavailable</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="serviceImage">Service Image:</label>
+                    <input type="file" id="serviceImage" name="serviceImage" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn-submit">Add Service</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/AddHouseKeepingService.js"></script>
+</body>
+</html>

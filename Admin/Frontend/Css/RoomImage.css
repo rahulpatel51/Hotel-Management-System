@@ -1,0 +1,96 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #e1e1e1;
+    margin: 0;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    background-color: #000000;
+    color: #e1e1e1;
+    min-height: 100vh;
+}
+
+/* Room Image Header Card */
+.room-image-card-header {
+    background-color: #141722;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.room-image-card-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Room Image Cards Grid */
+.room-image-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+}
+
+/* Individual Room Card */
+.room-card {
+    background-color: #141722;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.room-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.room-info h4 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.room-info p {
+    color: #6c7292;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .room-image-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .room-image-cards {
+        grid-template-columns: 1fr; /* 1 card per row for very small screens */
+    }
+}

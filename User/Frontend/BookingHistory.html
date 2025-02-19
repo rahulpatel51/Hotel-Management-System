@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History</title>
+    <link rel="stylesheet" href="Css/BookingHistory.css">
+    <link rel="stylesheet" href="Css/Common.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <a href="UserDashboard.html">
+                <span class="logo-text">Hotel Palace</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="UserDashboard.html">DASHBOARD</a></li>
+            <li><a href="RoomBooking.html">Room Booking</a></li>
+            <li><a href="CabBooking.html">Cab Booking</a></li>
+            <li><a href="WeddingHallBooking.html">Wedding Hall</a></li>
+            <li><a href="HousekeepingRequest.html">Housekeeping</a></li>
+            <li><a href="BookingHistory.html">Booking History</a></li>
+            <li><a href="UserProfile.html">Profile</a></li>
+            <li><button id="logoutBtn">Logout</button></li>
+        </ul>
+    </div>
+
+    <!-- Booking History Section -->
+    <section class="booking-history-section">
+        <div class="booking-history-header">
+            <h2>Your Booking History</h2>
+            <p>Here is a summary of all your past bookings and requests.</p>
+        </div>
+
+        <div class="booking-history-container">
+            <!-- Example Booking Item -->
+            <div class="booking-item" data-type="Room Booking" data-date="12th January 2025" data-detail="Deluxe Suite"
+                data-price="₹5000">
+                <div class="booking-info">
+                    <h3>Room Booking</h3>
+                    <p><strong>Date:</strong> 12th January 2025</p>
+                    <p><strong>Room Type:</strong> Deluxe Suite</p>
+                    <p><strong>Price:</strong> ₹5000</p>
+                </div>
+                <button class="view-details">View Details</button>
+            </div>
+
+            <div class="booking-item" data-type="Cab Booking" data-date="10th January 2025" data-detail="Airport Drop"
+                data-price="₹1500">
+                <div class="booking-info">
+                    <h3>Cab Booking</h3>
+                    <p><strong>Date:</strong> 10th January 2025</p>
+                    <p><strong>Destination:</strong> Airport</p>
+                    <p><strong>Price:</strong> ₹1500</p>
+                </div>
+                <button class="view-details">View Details</button>
+            </div>
+
+            <div class="booking-item" data-type="Wedding Hall Booking" data-date="5th January 2025"
+                data-detail="Grand Ballroom" data-price="₹25000">
+                <div class="booking-info">
+                    <h3>Wedding Hall Booking</h3>
+                    <p><strong>Date:</strong> 5th January 2025</p>
+                    <p><strong>Hall Name:</strong> Grand Ballroom</p>
+                    <p><strong>Price:</strong> ₹25000</p>
+                </div>
+                <button class="view-details">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Details Modal -->
+    <div class="booking-details-modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Booking Details</h2>
+            <p><strong>Type:</strong> <span id="modal-type"></span></p>
+            <p><strong>Date:</strong> <span id="modal-date"></span></p>
+            <p><strong>Details:</strong> <span id="modal-detail"></span></p>
+            <p><strong>Price:</strong> <span id="modal-price"></span></p>
+        </div>
+    </div>
+
+    <script src="Js/BookingHistory.js" defer></script>
+    <script src="Js/logout.js"></script>
+</body>
+
+</html>

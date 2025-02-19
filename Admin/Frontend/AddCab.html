@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cab - Hotel Management</title>
+    <link rel="stylesheet" href="Css/AddCab.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Add New Cab Card -->
+        <div class="hotel-management-card">
+            <h2>Add New Cab</h2>
+            <p>Click below to add a new cab to the hotel fleet</p>
+        </div>
+
+        <!-- Form Card for Adding Cab -->
+        <div class="form-card">
+            <form id="add-cab-form">
+                <div class="form-group">
+                    <label for="cabNumber">Cab Number:</label>
+                    <input type="text" id="cabNumber" name="cabNumber" placeholder="Enter cab number" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabModel">Cab Model:</label>
+                    <input type="text" id="cabModel" name="cabModel" placeholder="Enter cab model" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabDriver">Driver Name:</label>
+                    <input type="text" id="cabDriver" name="cabDriver" placeholder="Enter driver's name" required>
+                </div>
+                <!-- Added Driver Number Section -->
+                <div class="form-group">
+                    <label for="cabDriverNumber">Driver Number:</label>
+                    <input type="text" id="cabDriverNumber" name="cabDriverNumber" placeholder="Enter driver's contact number" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabPrice">Price per Kilometer:</label>
+                    <input type="number" id="cabPrice" name="cabPrice" placeholder="Enter price per kilometer" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabStatus">Cab Status:</label>
+                    <select id="cabStatus" name="cabStatus" required>
+                        <option value="available">Available</option>
+                        <option value="unavailable">Unavailable</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cabImage">Cab Image:</label>
+                    <input type="file" id="cabImage" name="cabImage" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn-submit">Add Cab</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/AddCab.js"></script>
+</body>
+</html>

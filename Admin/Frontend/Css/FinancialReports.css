@@ -1,0 +1,79 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #e1e1e1;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    background-color: #000000;
+    color: #e1e1e1;
+    min-height: 100vh;
+}
+
+/* Financial Report Card */
+.financial-report-card {
+    background-color: #141722;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.financial-report-card h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.financial-report-card p {
+    font-size: 18px;
+    color: #6c7292;
+    line-height: 1.5;
+}
+
+/* Financial Report Table */
+.financial-report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.financial-report-table th, .financial-report-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.financial-report-table th {
+    background-color: #1e242f;
+    color: #fff;
+}
+
+.financial-report-table td {
+    background-color: #1e242f;
+    color: #fff;
+}
+
+.financial-report-table tr:nth-child(even) td {
+    background-color: #2a2f3b;
+}
+
+.financial-report-table tr:hover td {
+    background-color: #333;
+}

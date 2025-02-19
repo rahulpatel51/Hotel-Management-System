@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cab - Hotel Management</title>
+    <link rel="stylesheet" href="Css/BookRoom.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+   <!-- Sidebar -->
+   <div class="sidebar">
+    <div class="logo">
+        <span class="logo-text">Hotel Palace</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="AdminDashboard.html">Dashboard</a></li>
+        <li><a href="AdminHotel.html">Hotel</a></li>
+        <li><a href="#">Hall Booking</a></li>
+        <li><a href="StaffDetails.html">Staff Details</a></li>
+        <li><a href="AdminProfile.html">Profile</a></li>
+        <li><a href="../Common/AdminLogin.html">Logout</a></li>
+    </ul>
+</div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Add New Cab Card -->
+        <div class="hotel-management-card">
+            <h2>Book A New Room</h2>
+            <p>Click below to book a new room for the hotel</p>
+        </div>
+
+        <!-- Form Card for Adding Cab -->
+        <div class="form-card">
+            <form id="add-cab-form">
+                <!-- Reservation Details Section -->
+                <div class="form-section reservation-details">
+                    <h3>Reservation Details</h3>
+                    <div class="form-columns">
+                        <div class="form-group">
+                            <label for="checkIn">Check In</label>
+                            <input type="date" id="checkIn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkOut">Check Out</label>
+                            <input type="date" id="checkOut" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section room-details">
+                    <div class="form-columns">
+                        <div class="form-group">
+                            <label for="roomType">Room Type</label>
+                            <select id="roomType" required>
+                                <option value="">Choose Room Type</option>
+                                <option value="single">Single</option>
+                                <option value="double">Double</option>
+                                <option value="suite">Suite</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="roomNo">Room No.</label>
+                            <select id="roomNo" required>
+                                <option value="">Choose Room No.</option>
+                                <option value="101">101</option>
+                                <option value="102">102</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="adults">Adults</label>
+                            <input type="number" id="adults" value="1" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="children">Children</label>
+                            <input type="number" id="children" value="0" min="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section customer-details">
+                    <div class="form-columns">
+                        <div class="form-group">
+                            <label for="countryCode">Country Code</label>
+                            <input type="text" id="countryCode" placeholder="Country Code">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileNo">Mobile No.</label>
+                            <input type="text" id="mobileNo" placeholder="Mobile No." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">First Name <span>*</span></label>
+                            <input type="text" id="firstName" required placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name</label>
+                            <input type="text" id="fatherName" placeholder="Father Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section identity-details">
+                    <div class="form-columns">
+                        <div class="form-group">
+                            <label for="identityType">Identity Type</label>
+                            <select id="identityType" required>
+                                <option value="">Select Identity Type</option>
+                                <option value="Passport">Passport</option>
+                                <option value="ID">National ID</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="idNumber">ID Number</label>
+                            <input type="text" id="idNumber" placeholder="ID Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="frontSide">Front Side Document</label>
+                            <input type="file" id="frontSide" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="backSide">Back Side Document</label>
+                            <input type="file" id="backSide" accept="image/*" required>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Book Room</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Js/BookRoom.js"></script>
+</body>
+</html>

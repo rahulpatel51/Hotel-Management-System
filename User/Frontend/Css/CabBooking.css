@@ -1,0 +1,195 @@
+/* Cab Booking Section */
+.cab-booking-section {
+    padding: 60px 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+}
+
+.cab-booking-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cab-booking-header h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.cab-booking-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+.cab-booking-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto-adjust for responsiveness */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cab-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.cab-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cab-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.cab-info {
+    padding: 20px;
+}
+
+.cab-info h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.cab-info p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #16a085;
+    margin-bottom: 20px;
+}
+
+.book-now {
+    background-color: #1abc9c;
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.book-now:hover {
+    background-color: #16a085;
+}
+
+/* Booking Form Modal */
+.booking-form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.booking-form-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    position: relative;
+    width: 450px;
+    max-width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-heading {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 34px;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #e74c3c;
+}
+
+.booking-form-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.booking-form-content label {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.booking-form-content button {
+    background-color: #1abc9c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.booking-form-content button:hover {
+    background-color: #16a085;
+}
+
+/* Button container for centering the button */
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0; /* Remove left padding for smaller screens */
+    }
+
+    .cab-booking-cards {
+        grid-template-columns: 1fr 1fr; /* Two cabs per row for medium screens */
+    }
+
+    .booking-form-content {
+        width: 90%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cab-booking-cards {
+        grid-template-columns: 1fr; /* One cab per row for small screens */
+    }
+}

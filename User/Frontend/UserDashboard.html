@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="Css/userDashboard.css">
+</head>
+
+<body>
+
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <a href="UserDashboard.html">
+                <span class="logo-text">Hotel Palace</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="UserDashboard.html">DASHBOARD</a></li>
+            <li><a href="RoomBooking.html">Room Booking</a></li>
+            <li><a href="CabBooking.html">Cab Booking</a></li>
+            <li><a href="WeddingHallBooking.html">Wedding Hall</a></li>
+            <li><a href="HousekeepingRequest.html">Housekeeping</a></li>
+            <li><a href="BookingHistory.html">Booking History</a></li>
+            <li><a href="UserProfile.html">Profile</a></li>
+            <li><button id="logoutBtn">Logout</button></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <header>
+            <div class="header-left">
+                <h1>Welcome, <span id="userName"></span></h1>
+            </div>
+            <div class="header-right">
+                <div class="user-info" id="userInfo">
+                    <img src="./Images/profile.png" alt="User Profile Picture" class="user-img" id="userImg">
+                    <span class="user-name" id="userNameSpan"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Stats -->
+        <section class="dashboard-stats" id="dashboardStats">
+            <div class="stat-card" id="recentBookingsCard">
+                <h3>Recent Bookings</h3>
+                <div class="stat-data">
+                    <p>No recent bookings</p>
+                </div>
+            </div>
+            <div class="stat-card" id="profileInfoCard">
+                <h3>Profile Information</h3>
+                <div class="stat-data">
+                    <p>Email: <span id="profileEmail">[User Email]</span></p>
+                    <p>Phone: <span id="profilePhone">[User Phone]</span></p>
+                </div>
+            </div>
+            <div class="stat-card" id="housekeepingRequestsCard">
+                <h3>Housekeeping Requests</h3>
+                <div class="stat-data">
+                    <p>No active requests</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking History Table -->
+        <section class="booking-history" id="bookingHistory">
+            <h2>Booking History</h2>
+            <table id="bookingHistoryTable">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingHistoryBody">
+                    <tr>
+                        <td>#1234</td>
+                        <td>Room Booking</td>
+                        <td>12/01/2025</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>#5678</td>
+                        <td>Wedding Hall</td>
+                        <td>15/01/2025</td>
+                        <td><span class="status pending">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="Js/userDashboard.js" defer></script>
+    <script src="Js/logout.js"></script>
+</body>
+
+</html>

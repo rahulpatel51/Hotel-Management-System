@@ -1,0 +1,120 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensures body covers the entire viewport */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Dark background */
+    color: #e1e1e1; /* Light gray text */
+    margin: 0;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 260px; /* Matches sidebar width */
+    padding: 40px;
+    background-color: #000000;
+    color: #e1e1e1;
+    min-height: 100vh; /* Ensure full height */
+    width: calc(100% - 250px); /* Fill the remaining space */
+}
+
+/* Hotel Management Card */
+.hotel-management-card {
+    background-color: #141722;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hotel-management-card h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hotel-management-card p {
+    font-size: 18px;
+    color: #6c7292;
+    line-height: 1.5;
+}
+
+/* Admin Controls Section */
+.admin-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Control Option Card */
+.card {
+    background-color: #141722;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #4ab3ff;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 50px;
+    color: #4ab3ff;
+    margin-bottom: 20px;
+}
+
+
+.card h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.card p {
+    color: #6c7292;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit the text color of the card */
+}
+
+.card {
+    border: none; /* Remove any border */
+}
+
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .admin-controls {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .admin-controls {
+        grid-template-columns: 1fr; /* 1 card per row for very small screens */
+    }
+}

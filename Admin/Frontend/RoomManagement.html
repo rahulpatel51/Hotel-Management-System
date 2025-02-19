@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Rooms - Hotel Management</title>
+    <link rel="stylesheet" href="Css/RoomManagement.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Manage Rooms Card -->
+        <div class="hotel-management-card">
+            <h2>Manage Rooms</h2>
+            <p>Here you can view, edit, or delete rooms from the hotel</p>
+        </div>
+
+        <!-- Room List Table -->
+        <div class="room-list-card">
+            <table class="room-table">
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        <th>Price per Night</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Room 1 -->
+                    <tr>
+                        <td>101</td>
+                        <td>Single</td>
+                        <td>$100</td>
+                        <td>Available</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Example Room 2 -->
+                    <tr>
+                        <td>102</td>
+                        <td>Double</td>
+                        <td>$150</td>
+                        <td>Booked</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rooms as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Edit Room Modal -->
+    <div class="modal" id="editRoomModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Edit Room Details</h2>
+            <form id="editRoomForm">
+                <div class="form-group">
+                    <label for="roomNumber">Room Number:</label>
+                    <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter room number" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomType">Room Type:</label>
+                    <select id="roomType" name="roomType" required>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roomPrice">Price per Night:</label>
+                    <input type="number" id="roomPrice" name="roomPrice" placeholder="Enter price per night" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomStatus">Status:</label>
+                    <select id="roomStatus" name="roomStatus" required>
+                        <option value="available">Available</option>
+                        <option value="booked">Booked</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/RoomManagement.js"></script>
+</body>
+</html>

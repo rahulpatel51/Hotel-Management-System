@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Cabs - Hotel Management</title>
+    <link rel="stylesheet" href="Css/CabManagement.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Manage Cabs Card -->
+        <div class="hotel-management-card">
+            <h2>Manage Cabs</h2>
+            <p>Here you can view, edit, or delete cabs from the hotel's cab service</p>
+        </div>
+
+        <!-- Cab List Table -->
+        <div class="cab-list-card">
+            <table class="cab-table">
+                <thead>
+                    <tr>
+                        <th>Cab ID</th>
+                        <th>Cab Model</th>
+                        <th>Cab Number</th>
+                        <th>Driver Name</th>
+                        <th>Driver Number</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cab rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Edit Cab Modal -->
+    <div class="modal" id="editCabModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Edit Cab Details</h2>
+            <form id="editCabForm">
+                <div class="form-group">
+                    <label for="cabID">Cab ID:</label>
+                    <input type="text" id="cabID" name="cabID" placeholder="Enter cab ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabModel">Cab Model:</label>
+                    <input type="text" id="cabModel" name="cabModel" placeholder="Enter cab model" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabNumber">Cab Number:</label>
+                    <input type="text" id="cabNumber" name="cabNumber" placeholder="Enter cab Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="driverName">Driver Name:</label>
+                    <input type="text" id="driverName" name="driverName" placeholder="Enter driver's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="driverNumber">Driver Number:</label>
+                    <input type="text" id="driverNumber" name="driverNumber" placeholder="Enter driver's number" required>
+                </div>
+                <div class="form-group">
+                    <label for="cabStatus">Status:</label>
+                    <select id="cabStatus" name="cabStatus" required>
+                        <option value="available">Available</option>
+                        <option value="booked">Booked</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/CabManagement.js"></script>
+</body>
+</html>

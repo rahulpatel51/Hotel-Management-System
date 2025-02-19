@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Management</title>
+    <link rel="stylesheet" href="Css/StaffDetails.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <!-- Staff Details Card -->
+        <div class="staff-details-card">
+            <h2>Staff Details</h2>
+            <p>Manage and view all staff members' details in the system.</p>
+        </div>
+
+        <!-- Staff Details Table -->
+        <table class="staff-details-table">
+            <thead>
+                <tr>
+                    <th>Profile Photo</th>
+                    <th>Staff ID</th>
+                    <th>Name</th>
+                    <th>Email</th> <!-- Added Email column -->
+                    <th>Phone Number</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="Images/profile.png" alt="John Doe" class="profile-img"></td>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>johndoe@example.com</td> <!-- Added Email -->
+                    <td>9876543210</td>
+                    <td>Manager</td>
+                    <td>$5000</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="Images/room2.jpg" alt="Jane Smith" class="profile-img"></td>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>janesmith@example.com</td> <!-- Added Email -->
+                    <td>9876543211</td>
+                    <td>Receptionist</td>
+                    <td>$3000</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more staff rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Edit Staff Modal -->
+    <div id="editStaffModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Edit Staff Details</h2>
+            <form id="editStaffForm">
+                <div class="form-group">
+                    <label for="staffId">Staff ID</label>
+                    <input type="text" id="staffId" name="staffId" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="staffName">Name</label>
+                    <input type="text" id="staffName" name="staffName">
+                </div>
+                <div class="form-group">
+                    <label for="staffEmail">Email</label> <!-- Added Email field in the modal -->
+                    <input type="email" id="staffEmail" name="staffEmail">
+                </div>
+                <div class="form-group">
+                    <label for="staffPhone">Phone Number</label>
+                    <input type="text" id="staffPhone" name="staffPhone">
+                </div>
+                <div class="form-group">
+                    <label for="staffPosition">Position</label>
+                    <input type="text" id="staffPosition" name="staffPosition">
+                </div>
+                <div class="form-group">
+                    <label for="staffSalary">Salary</label>
+                    <input type="text" id="staffSalary" name="staffSalary">
+                </div>
+                <button type="submit" class="btn-submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/StaffDetails.js"></script>
+</body>
+
+</html>

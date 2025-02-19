@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 4px 0px 12px rgba(0, 0, 0, 0.1);
+}
+.logo .logo-text {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-weight: 700; /* Bold font for impact */
+    font-size: 36px;  /* Larger size for prominence */
+    color: #2C3E50;   /* Dark blue color for professionalism */
+    text-align: center;
+    display: block;
+    margin-bottom: 30px;  /* Space below the logo */
+    text-transform: uppercase;
+    letter-spacing: 3px;  /* Increase letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+    padding: 10px 0;  /* Padding around the text */
+}
+
+/* Optional: Additional styling for the logo area */
+.sidebar .logo {
+    padding: 20px;
+    background-color: #ECF0F1;
+    border-radius: 10px;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+}
+
+.sidebar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li a:hover {
+    background-color: #34495E;
+    padding-left: 15px;
+}
+
+.sidebar .logo a {
+    text-decoration: none;
+}
+
+#logoutBtn {
+    color: white;
+    background-color: #2C3E50;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    width: calc(100% - 250px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #2C3E50;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info .user-name {
+    font-size: 18px;
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background-color: white;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-card h3 {
+    font-size: 20px;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.stat-card .stat-data p {
+    color: #7F8C8D;
+}
+
+.booking-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.booking-history th, .booking-history td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.booking-history th {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.booking-history tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.booking-history .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.booking-history .status.completed {
+    background-color: #27AE60;
+    color: white;
+}
+
+.booking-history .status.pending {
+    background-color: #F39C12;
+    color: white;
+}

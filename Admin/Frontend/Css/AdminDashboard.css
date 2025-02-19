@@ -1,0 +1,319 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensures body covers the entire viewport */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Dark background */
+    color: #e1e1e1; /* Light gray text */
+    margin: 0;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 260px; /* Matches sidebar width */
+    padding: 40px;
+    background-color: #000000;
+    color: #e1e1e1;
+    min-height: 100vh; /* Ensure full height */
+    width: calc(100% - 250px); /* Fill the remaining space */
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #141722;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #6c7292;
+}
+
+/* Admin Info Section */
+.admin-info {
+    background-color: #141722;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+}
+
+.admin-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.admin-details h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.admin-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #6c7292;
+}
+
+.edit-profile-btn {
+    background-color: #4ab3ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+    background-color: #3a96cc;
+    transform: scale(1.05);
+}
+
+/* Profile Image Wrapper */
+.image-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.change-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.image-wrapper:hover .change-image-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+
+/* Dashboard Stats */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background-color: #141722;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stat-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 22px;
+    color: #4ab3ff;
+    font-weight: 600;
+}
+
+/* Admin Controls Section */
+.admin-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.control-option {
+    background-color: #141722;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-option:hover {
+    background-color: #4ab3ff;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.control-option h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.control-option p {
+    color: #6c7292;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.control-option i {
+    font-size: 40px;
+    color: #4ab3ff;
+    margin-bottom: 20px;
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #141722;
+    color: #e1e1e1;
+    padding: 51px;
+    border-radius: 10px;
+    width: 444px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    height: 424px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    font-size: 35px;
+    color: #e1e1e1;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #f44336;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #e1e1e1;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #0d1117;
+    color: #e1e1e1;
+}
+
+.modal-content input:focus {
+    border-color: #4ab3ff;
+    outline: none;
+}
+
+.save-btn {
+    background-color: #4ab3ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #3a96cc;
+}
+
+/* Modal Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

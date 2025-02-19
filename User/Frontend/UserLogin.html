@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login</title>
+  <link rel="stylesheet" href="Css/UserLogin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="showLogin()">Login</button>
+        <button type="button" class="toggle-btn" onclick="showSignup()">Signup</button>
+      </div>
+      <!-- Login Form -->
+      <form id="loginForm" class="input-group" onsubmit="return loginUser(event)">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" class="input-field" placeholder="Email" required>
+        <input type="password" id="loginPassword" class="input-field" placeholder="Password" required>
+        <div class="show-password-container">
+          <input type="checkbox" id="showPasswordLogin" onclick="togglePasswordVisibility('login')">
+          <label for="showPasswordLogin" class="show-password-text">Show Password</label>
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+        <!-- Google Login Button -->
+        <div class="google-auth">
+          <button type="button" class="google-btn" onclick="googleLogin()">Login with Google</button>
+        </div>
+        <div class="forgot-password">
+          <button type="button" class="forgot-btn">Forgot Password?</button>
+        </div>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="input-group" style="display: none;" onsubmit="return signupUser(event)">
+        <h2>Signup</h2>
+        <input type="text" id="fullName" class="input-field" placeholder="Full Name" required>
+        <input type="email" id="signupEmail" class="input-field" placeholder="Email" required>
+        <input type="password" id="signupPassword" class="input-field" placeholder="Password" required>
+        <div class="show-password-container">
+          <input type="checkbox" id="showPasswordSignup" onclick="togglePasswordVisibility('signup')">
+          <label for="showPasswordSignup" class="show-password-text">Show Password</label>
+        </div>
+        <button type="submit" class="submit-btn">Signup</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="Js/UserLogin.js"></script>
+</body>
+</html>

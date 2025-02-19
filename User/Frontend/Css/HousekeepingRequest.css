@@ -1,0 +1,101 @@
+/* Housekeeping Request Section */
+.housekeeping-section {
+    padding: 60px 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+}
+
+.housekeeping-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.housekeeping-header h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.housekeeping-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+.housekeeping-form {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.housekeeping-form .form-group {
+    margin-bottom: 20px;
+}
+
+.housekeeping-form .form-group label {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.housekeeping-form input, .housekeeping-form select, .housekeeping-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.housekeeping-form select {
+    height: 45px;
+}
+
+.housekeeping-form button {
+    background-color: #16a085;
+    color: white;
+    font-size: 16px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.housekeeping-form button:hover {
+    background-color: #1abc9c;
+}
+
+.housekeeping-form textarea {
+    resize: vertical;
+}
+
+/* Button container for centering the button */
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0; /* Remove left padding for smaller screens */
+    }
+
+    .housekeeping-form {
+        width: 90%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .housekeeping-form {
+        width: 100%; /* Full width on very small screens */
+    }
+}

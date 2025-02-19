@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Hall Booking</title>
+    <link rel="stylesheet" href="Css/WeddingHallBooking.css">
+    <link rel="stylesheet" href="Css/Common.css">
+</head>
+
+<body>
+
+     <!-- Sidebar -->
+     <div class="sidebar">
+        <div class="logo">
+            <a href="UserDashboard.html">
+                <span class="logo-text">Hotel Palace</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="UserDashboard.html">DASHBOARD</a></li>
+            <li><a href="RoomBooking.html">Room Booking</a></li>
+            <li><a href="CabBooking.html">Cab Booking</a></li>
+            <li><a href="WeddingHallBooking.html">Wedding Hall</a></li>
+            <li><a href="HousekeepingRequest.html">Housekeeping</a></li>
+            <li><a href="BookingHistory.html">Booking History</a></li>
+            <li><a href="UserProfile.html">Profile</a></li>
+            <li><button id="logoutBtn">Logout</button></li>
+        </ul>
+    </div>
+
+    <!-- Wedding Hall Booking Section -->
+    <section class="wedding-hall-booking-section">
+        <div class="wedding-hall-booking-header">
+            <h2>Book a Wedding Hall</h2>
+            <p>Choose your ideal wedding hall for your special day!</p>
+        </div>
+
+        <div class="wedding-hall-booking-cards">
+            <!-- Wedding hall cards will be dynamically populated here -->
+        </div>
+    </section>
+
+    <!-- Booking Form Modal -->
+    <div id="booking-form" class="booking-form-modal">
+        <div class="booking-form-content">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2 class="modal-heading">Book your wedding hall</h2>
+            <form>
+                <label for="hall-type">Wedding Hall Type</label>
+                <input type="text" id="hall-type" name="hall-type" readonly>
+
+                <label for="price">Price per event</label>
+                <input type="text" id="price" name="price" readonly>
+
+                <label for="dates">Select Dates</label>
+                <input type="date" id="check-in" name="check-in">
+                <input type="date" id="check-out" name="check-out">
+
+                <div class="btn-container">
+                    <button type="submit">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="Js/WeddingHallBooking.js" defer></script>
+    <script src="Js/logout.js"></script>
+</body>
+
+</html>

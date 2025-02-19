@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Booking</title>
+    <link rel="stylesheet" href="Css/CabBooking.css">
+    <link rel="stylesheet" href="Css/Common.css">
+</head>
+
+<body>
+
+     <!-- Sidebar -->
+     <div class="sidebar">
+        <div class="logo">
+            <a href="UserDashboard.html">
+                <span class="logo-text">Hotel Palace</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="UserDashboard.html">DASHBOARD</a></li>
+            <li><a href="RoomBooking.html">Room Booking</a></li>
+            <li><a href="CabBooking.html">Cab Booking</a></li>
+            <li><a href="WeddingHallBooking.html">Wedding Hall</a></li>
+            <li><a href="HousekeepingRequest.html">Housekeeping</a></li>
+            <li><a href="BookingHistory.html">Booking History</a></li>
+            <li><a href="UserProfile.html">Profile</a></li>
+            <li><button id="logoutBtn">Logout</button></li>
+        </ul>
+    </div>
+
+    <!-- Cab Booking Section -->
+    <section class="cab-booking-section">
+        <div class="cab-booking-header">
+            <h2>Book a Cab</h2>
+            <p>Choose your preferred cab for a comfortable ride!</p>
+        </div>
+
+        <!-- Cab booking cards will be dynamically populated -->
+        <div class="cab-booking-cards" id="cabCardsContainer">
+            <!-- Dynamic content from backend -->
+        </div>
+    </section>
+
+    <!-- Booking Form Modal -->
+    <div id="booking-form" class="booking-form-modal">
+        <div class="booking-form-content">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2 class="modal-heading">Book your cab</h2>
+            <form>
+                <label for="cab-type">Cab Type</label>
+                <input type="text" id="cab-type" name="cab-type" readonly>
+
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price" readonly>
+
+                <label for="pickup-location">Pick-up Location</label>
+                <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pick-up location">
+
+                <label for="dropoff-location">Drop-off Location</label>
+                <input type="text" id="dropoff-location" name="dropoff-location" placeholder="Enter drop-off location">
+
+                <div class="btn-container">
+                    <button type="submit">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="Js/CabBooking.js" defer></script>
+    <script src="Js/logout.js"></script>
+</body>
+
+</html>

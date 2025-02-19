@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="Css/AdminLogin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="showAdminLogin()">Login</button>
+                <button type="button" class="toggle-btn" onclick="showAdminSignup()">Signup</button>
+            </div>
+
+            <!-- Admin Login Form -->
+            <form id="adminLoginForm" class="input-group">
+                <h2>Admin Login</h2>
+                <input type="email" class="input-field" placeholder="Admin Email" required>
+                <input type="password" class="input-field" id="adminLoginPassword" placeholder="Password" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="showLoginPassword" onclick="toggleLoginPasswordVisibility()">
+                    <label for="showLoginPassword" onclick="toggleLoginPasswordVisibility()">Show Password</label>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <!-- Google Login Button (Admin Login Form) -->
+                <div class="google-auth">
+                    <button type="button" class="google-btn" onclick="googleAdminLogin()">Login with Google</button>
+                </div>
+                <!-- Forgot Password Link -->
+                <div class="forgot-password">
+                    <a href="ForgotPassword.html">Forgot Password?</a>
+                </div>
+            </form>
+
+            <!-- Admin Signup Form -->
+            <form id="adminSignupForm" class="input-group" style="display: none;">
+                <h2>Admin Signup</h2>
+                <input type="text" class="input-field" placeholder="Full Name" required>
+                <input type="email" class="input-field" placeholder="Admin Email" required>
+                <input type="password" class="input-field" id="adminSignupPassword" placeholder="Password" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="showSignupPassword" onclick="toggleSignupPasswordVisibility()">
+                    <label for="showSignupPassword" onclick="toggleSignupPasswordVisibility()">Show Password</label>
+                </div>
+                <button type="submit" class="submit-btn">Signup</button>
+                <!-- Google Signup Button (Admin Signup Form) -->
+                <div class="google-auth">
+                    <button type="button" class="google-btn" onclick="googleAdminSignup()">Signup with Google</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/AdminLogin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="Css/AdminProfile.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="profile-header">
+            <h2>Admin Profile</h2>
+            <p>Manage your profile information</p>
+        </div>
+
+        <div class="profile-details">
+            <div class="profile-image-container">
+                <img src="../Assets/Images/profile.png" alt="Admin Image" class="profile-image" id="adminImage">
+                <label for="profileImageInput" class="change-image-overlay">Change Image</label>
+                <input type="file" id="profileImageInput" accept="image/*" style="display: none;">
+            </div>
+        
+            <div class="details-container">
+                <div class="detail-item">
+                    <label for="adminName">Name</label>
+                    <p id="adminName">Admin Name</p>
+                </div>
+                <div class="detail-item">
+                    <label for="adminEmail">Email</label>
+                    <p id="adminEmail">admin@example.com</p>
+                </div>
+                <div class="detail-item">
+                    <label for="adminPhone">Phone</label>
+                    <p id="adminPhone">+1234567890</p>
+                </div>
+                <div class="detail-item">
+                    <label for="adminAddress">Address</label>
+                    <p id="adminAddress">123 Main St, City, Country</p>
+                </div>
+                <div class="detail-item">
+                    <label for="adminDOB">Date of Birth</label>
+                    <p id="adminDOB">01/01/1985</p>
+                </div>
+        
+                <!-- Edit Profile Button -->
+                <div class="edit-btn-container">
+                    <button class="edit-profile-btn" id="editProfileBtn">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+    <!-- Edit Profile Modal -->
+<div id="editProfileModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+        <h2>Edit Profile</h2>
+        <div class="modal-field">
+            <label for="modalName">Name:</label>
+            <input type="text" id="modalName" value="Admin Name">
+        </div>
+        <div class="modal-field">
+            <label for="modalEmail">Email:</label>
+            <input type="email" id="modalEmail" value="admin@example.com">
+        </div>
+        <div class="modal-field">
+            <label for="modalPhone">Phone:</label>
+            <input type="tel" id="modalPhone" value="+1234567890">
+        </div>
+        <div class="modal-field">
+            <label for="modalAddress">Address:</label>
+            <input type="text" id="modalAddress" value="123 Main St, City, Country">
+        </div>
+        <div class="modal-field">
+            <label for="modalDOB">Date of Birth:</label>
+            <input type="date" id="modalDOB" value="1985-01-01">
+        </div>
+        <button id="saveBtn" class="save-btn">Save Changes</button>
+    </div>
+</div>
+
+
+    <script src="js/AdminProfile.js" defer></script>
+</body>
+</html>

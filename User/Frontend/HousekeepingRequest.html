@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housekeeping Request</title>
+    <link rel="stylesheet" href="Css/HousekeepingRequest.css">
+    <link rel="stylesheet" href="Css/Common.css">
+</head>
+
+<body>
+
+     <!-- Sidebar -->
+     <div class="sidebar">
+        <div class="logo">
+            <a href="UserDashboard.html">
+                <span class="logo-text">Hotel Palace</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="UserDashboard.html">DASHBOARD</a></li>
+            <li><a href="RoomBooking.html">Room Booking</a></li>
+            <li><a href="CabBooking.html">Cab Booking</a></li>
+            <li><a href="WeddingHallBooking.html">Wedding Hall</a></li>
+            <li><a href="HousekeepingRequest.html">Housekeeping</a></li>
+            <li><a href="BookingHistory.html">Booking History</a></li>
+            <li><a href="UserProfile.html">Profile</a></li>
+            <li><button id="logoutBtn">Logout</button></li>
+        </ul>
+    </div>
+
+    <!-- Housekeeping Request Section -->
+    <section class="housekeeping-section">
+        <div class="housekeeping-header">
+            <h2>Request Housekeeping Service</h2>
+            <p>Let us know your needs, and we'll take care of everything!</p>
+        </div>
+
+        <div class="housekeeping-form">
+            <form id="housekeeping-form">
+                <div class="form-group">
+                    <label for="room-number">Room Number</label>
+                    <input type="text" id="room-number" name="room-number" placeholder="Enter your room number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service-type">Service Type</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="" disabled selected>Select a service</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" name="price" readonly placeholder="Price will appear here" />
+                </div>
+
+                <div class="form-group">
+                    <label for="special-request">Special Requests</label>
+                    <textarea id="special-request" name="special-request" rows="4" placeholder="Any specific requirements?" required></textarea>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit">Request Service</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="Js/HousekeepingRequest.js" defer></script>
+    <script src="Js/logout.js"></script>
+</body>
+
+</html>

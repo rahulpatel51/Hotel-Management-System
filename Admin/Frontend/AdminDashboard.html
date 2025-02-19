@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="Css/AdminDashboard.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Admin Info Section -->
+        <div class="admin-info">
+            <div class="admin-info-container">
+                <div class="admin-image">
+                    <div class="image-wrapper">
+                        <img src="../Assets/Images/profile.png" alt="Admin Image" id="adminImage">
+                        <label for="profileImageInput" class="change-image-overlay">Change Image</label>
+                        <input type="file" id="profileImageInput" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                <div class="admin-details">
+                    <h3 id="adminName">Admin Name</h3>
+                    <p><strong>Email:</strong> <span id="adminEmail">admin@example.com</span></p>
+                    <button class="edit-profile-btn" id="editProfileBtn">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h2>Welcome to Admin Dashboard</h2>
+            <p>Manage the hotel's services and resources with ease.</p>
+        </div>
+
+        <!-- Dashboard Stats -->
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h4>Room Bookings</h4>
+                <p>120 Bookings</p>
+            </div>
+            <div class="stat-card">
+                <h4>Cab Bookings</h4>
+                <p>45 Bookings</p>
+            </div>
+            <div class="stat-card">
+                <h4>Wedding Halls</h4>
+                <p>30 Bookings</p>
+            </div>
+            <div class="stat-card">
+                <h4>Housekeeping Requests</h4>
+                <p>10 Requests</p>
+            </div>
+        </div>
+
+        <!-- Admin Controls -->
+        <div class="admin-controls">
+            <div class="control-option" onclick="window.location.href='RoomManagement.html'">
+                <i class="fa fa-bed"></i>
+                <h4>Manage Rooms</h4>
+                <p>Add, update, or remove rooms from the system.</p>
+            </div>
+            <div class="control-option" onclick="window.location.href='CabManagement.html'">
+                <i class="fa fa-car"></i>
+                <h4>Manage Cabs</h4>
+                <p>Control cab bookings and availability.</p>
+            </div>
+            <div class="control-option" onclick="window.location.href='WeddingHallManagement.html'">
+                <i class="fa fa-gift"></i>
+                <h4>Manage Wedding Halls</h4>
+                <p>Manage wedding hall bookings and schedules.</p>
+            </div>
+            <div class="control-option" onclick="window.location.href='HousekeepingManagement.html'">
+                <i class="fa fa-broom"></i>
+                <h4>Manage Housekeeping</h4>
+                <p>Oversee housekeeping services and requests.</p>
+            </div>
+            <div class="control-option" onclick="window.location.href='FinancialReports.html'">
+                <i class="fa fa-chart-line"></i>
+                <h4>View Financial Reports</h4>
+                <p>Generate and view reports related to the hotel's financials.</p>
+            </div>
+            <div class="control-option" onclick="window.location.href='ServiceRequest.html'">
+                <i class="fa fa-tasks"></i>
+                <h4>View All Service Requests</h4>
+                <p>Monitor and manage all service requests from users.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="editProfileForm">
+                <label for="editName">Name</label>
+                <input type="text" id="editName" value="Admin Name" required>
+
+                <label for="editEmail">Email</label>
+                <input type="email" id="editEmail" value="admin@example.com" required>
+
+                <label for="editPassword">Password</label>
+                <input type="password" id="editPassword" placeholder="Enter new password (optional)">
+
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/AdminDashboard.js" defer></script>
+</body>
+
+</html>

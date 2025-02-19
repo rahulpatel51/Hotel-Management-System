@@ -1,0 +1,190 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  .container {
+    width: 490px;
+    height: 590px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+  
+  .form-box {
+    position: relative;
+    width: 320px;
+    bottom: 180px;
+  }
+  
+  .button-box {
+    width: 240px;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .toggle-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #444;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+  }
+  
+  .toggle-btn:hover {
+    color: #8e44ad;
+  }
+  
+  #btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  
+  .input-group {
+    top: 100px;
+    position: absolute;
+    width: 300px;
+    transition: 0.5s;
+  }
+  
+  .input-group h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8e44ad;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .input-field:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(120deg, #8e44ad, #2980b9);
+  }
+  
+  .google-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #db4437;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    transition: 0.3s;
+  }
+  
+  .google-btn:hover {
+    background-color: #c1351d;
+  }
+  
+  .google-btn::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Show Password and Forgot Password Styles */
+  .show-password-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .show-password-container input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    transform: scale(1.2); 
+  }
+  
+  .show-password-text {
+    display: inline-block;
+    margin-left: 10px;
+    color: #444; 
+    cursor: pointer;
+  }
+  
+  .show-password-text:hover {
+    color: #8e44ad;
+    text-decoration: none;
+  }
+  
+  /* Forgot Password Button */
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .forgot-btn {
+    background: transparent;
+    border: none;
+    color: #8e44ad;
+    font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .forgot-btn:hover {
+    color: #2980b9;
+  }
+  

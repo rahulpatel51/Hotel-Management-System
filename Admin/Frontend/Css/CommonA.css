@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.sidebar {
+    width: 265px;
+    background-color: #141722; /* Dark slate */
+    color: #e1e1e1;
+    padding-top: 40px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.3);
+    border-right: 1px solid #333;
+}
+
+/* Logo Styling */
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(45deg, #6c7292, #00aaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar .logo {
+    padding: 20px;
+    background-color: #000;
+    border-radius: 10px;
+    margin: 10px 0;
+    height: 180px;
+    width: 228px;
+    margin-left: 16px;
+}
+
+/* Navigation Links */
+.sidebar .nav-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar .nav-links li {
+    padding: 12px 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sidebar .nav-links a {
+    display: block;
+    color: #e1e1e1;
+    font-size: 16px;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.sidebar .nav-links a:hover, .sidebar .nav-links a.active {
+    background-color: #0d1117;
+    color: #fff;
+    transform: translateX(-10px); /* Smooth effect */
+}
+
+/* Hover Effect Fix */
+.sidebar .nav-links a:hover {
+    background-color: #0d1117; /* Keeping background fixed */
+    transform: translateX(-10px); /* Apply transform without overflow */
+} 

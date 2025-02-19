@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Room - Hotel Management</title>
+    <link rel="stylesheet" href="Css/AddRoom.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+   <!-- Sidebar -->
+   <div class="sidebar">
+    <div class="logo">
+        <span class="logo-text">Hotel Palace</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="AdminDashboard.html">Dashboard</a></li>
+        <li><a href="AdminHotel.html">Hotel</a></li>
+        <li><a href="#">Hall Booking</a></li>
+        <li><a href="StaffDetails.html">Staff Details</a></li>
+        <li><a href="AdminProfile.html">Profile</a></li>
+        <li><a href="../Common/AdminLogin.html">Logout</a></li>
+    </ul>
+</div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Add New Room Card -->
+        <div class="hotel-management-card">
+            <h2>Add New Room</h2>
+            <p>Click below to add a new room to the hotel</p>
+        </div>
+
+        <!-- Form Card for Adding Room -->
+        <div class="form-card">
+            <form id="add-room-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="roomNumber">Room Number:</label>
+                    <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter room number" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomType">Room Type:</label>
+                    <select id="roomType" name="roomType" required>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roomPrice">Room Price:</label>
+                    <input type="number" id="roomPrice" name="roomPrice" placeholder="Enter room price" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomDescription">Room Description:</label>
+                    <textarea id="roomDescription" name="roomDescription" placeholder="Enter room description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="roomStatus">Room Status:</label>
+                    <select id="roomStatus" name="roomStatus" required>
+                        <option value="available">Available</option>
+                        <option value="occupied">Occupied</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roomImage">Room Image:</label>
+                    <input type="file" id="roomImage" name="roomImage" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn-submit">Add Room</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/AddRoom.js"></script>
+</body>
+</html>

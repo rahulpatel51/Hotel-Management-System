@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Wedding Hall - Hotel Management</title>
+    <link rel="stylesheet" href="Css/AddWeddingHall.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+   <!-- Sidebar -->
+   <div class="sidebar">
+    <div class="logo">
+        <span class="logo-text">Hotel Palace</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="AdminDashboard.html">Dashboard</a></li>
+        <li><a href="AdminHotel.html">Hotel</a></li>
+        <li><a href="#">Hall Booking</a></li>
+        <li><a href="StaffDetails.html">Staff Details</a></li>
+        <li><a href="AdminProfile.html">Profile</a></li>
+        <li><a href="../Common/AdminLogin.html">Logout</a></li>
+    </ul>
+</div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Add New Wedding Hall Card -->
+        <div class="hotel-management-card">
+            <h2>Add New Wedding Hall</h2>
+            <p>Click below to add a new wedding hall for booking</p>
+        </div>
+    
+        <!-- Form Card for Adding Wedding Hall -->
+        <div class="form-card">
+            <form id="add-wedding-hall-form">
+                <div class="form-group">
+                    <label for="hallName">Hall Name:</label>
+                    <input type="text" id="hallName" name="hallName" placeholder="Enter hall name" required>
+                </div>
+                <div class="form-group">
+                    <label for="hallCapacity">Hall Capacity:</label>
+                    <input type="number" id="hallCapacity" name="hallCapacity" placeholder="Enter hall capacity" required>
+                </div>
+                <div class="form-group">
+                    <label for="hallPrice">Price per Hour:</label>
+                    <input type="number" id="hallPrice" name="hallPrice" placeholder="Enter price per hour" required>
+                </div>
+                <div class="form-group">
+                    <label for="hallLocation">Location:</label>
+                    <input type="text" id="hallLocation" name="hallLocation" placeholder="Enter hall location" required>
+                </div>
+                <div class="form-group">
+                    <label for="hallStatus">Hall Status:</label>
+                    <select id="hallStatus" name="hallStatus" required>
+                        <option value="available">Available</option>
+                        <option value="unavailable">Unavailable</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hallType">Hall Type:</label>
+                    <select id="hallType" name="hallType" required>
+                        <option value="banquet">Banquet</option>
+                        <option value="ballroom">Ballroom</option>
+                        <option value="conference">Conference</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hallNumber">Hall Number:</label>
+                    <input type="number" id="hallNumber" name="hallNumber" placeholder="Enter hall number" required>
+                </div>
+                <div class="form-group">
+                    <label for="hallDescription">Hall Description:</label>
+                    <textarea id="hallDescription" name="hallDescription" rows="4" placeholder="Enter a detailed description of the hall" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="hallImage">Hall Image:</label>
+                    <input type="file" id="hallImage" name="hallImage" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn-submit">Add Wedding Hall</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="js/AddWeddingHall.js"></script>
+</body>
+</html>

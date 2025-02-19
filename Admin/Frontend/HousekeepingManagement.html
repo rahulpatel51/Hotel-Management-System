@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Housekeeping - Hotel Management</title>
+    <link rel="stylesheet" href="Css/HousekeepingManagement.css">
+    <link rel="stylesheet" href="Css/CommonA.css">
+</head>
+<body>
+
+     <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">Hotel Palace</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="AdminDashboard.html">Dashboard</a></li>
+            <li><a href="AdminHotel.html">Hotel</a></li>
+            <li><a href="#">Hall Booking</a></li>
+            <li><a href="StaffDetails.html">Staff Details</a></li>
+            <li><a href="AdminProfile.html">Profile</a></li>
+            <li><a href="../Common/AdminLogin.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Manage Housekeeping Card -->
+        <div class="hotel-management-card">
+            <h2>Manage Housekeeping</h2>
+            <p>Here you can view, assign, or update housekeeping tasks</p>
+        </div>
+
+        <!-- Housekeeping Task List -->
+        <div class="housekeeping-list-card">
+            <table class="housekeeping-table">
+                <thead>
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Room Number</th>
+                        <th>Assigned To</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Task 1 -->
+                    <tr>
+                        <td>001</td>
+                        <td>101</td>
+                        <td>John Doe</td>
+                        <td>Completed</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Example Task 2 -->
+                    <tr>
+                        <td>002</td>
+                        <td>102</td>
+                        <td>Jane Doe</td>
+                        <td>In Progress</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more tasks as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal" id="editTaskModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Edit Housekeeping Task</h2>
+            <form id="editTaskForm">
+                <div class="form-group">
+                    <label for="taskId">Task ID:</label>
+                    <input type="text" id="taskId" name="taskId" placeholder="Enter task ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomNumber">Room Number:</label>
+                    <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter room number" required>
+                </div>
+                <div class="form-group">
+                    <label for="assignedTo">Assigned To:</label>
+                    <input type="text" id="assignedTo" name="assignedTo" placeholder="Enter assigned person" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskStatus">Status:</label>
+                    <select id="taskStatus" name="taskStatus" required>
+                        <option value="completed">Completed</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Js/HousekeepingManagement.js"></script>
+</body>
+</html>
